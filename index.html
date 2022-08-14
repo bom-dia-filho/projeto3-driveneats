@@ -6,9 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECT 3 - DRIVEN EATS</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div id="app"></div>
+    
+    
+    <div class="app">
+
+        <header class="main-header">
+            <h1>DrivenEats</h1>
+            <span>Sua comida em até 6 minutos.</span>
+        </header>
+
+        <div class="container-orders">
+            <div class="orders">
+                <h2>Primeiro, seu prato</h2>
+                <div class="container">
+                    <div class="order">
+                        <img src="assets/frango_yin_yang 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Frango Yin Yang</h2>
+                        <p class="description">Um pouco de batata, um pouco de salada</p>
+                        <div class="price">R$ 14,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/frango_yin_yang 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Frango Yin Yang 2</h2>
+                        <p class="description">Um pouco de batata, um pouco de salada</p>
+                        <div class="price">R$ 12,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/frango_yin_yang 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Frango Yin Yang 3</h2>
+                        <p class="description">Um pouco de batata, um pouco de salada</p>
+                        <div class="price">R$ 16,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orders">
+                <h2>Agora, sua bebida</h2>
+                <div class="container">
+                    <div class="order">
+                        <img src="assets/coquinha_gelada 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Coquinha gelada</h2>
+                        <p class="description">Lata 350ml</p>
+                        <div class="price">R$ 8,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/coquinha_gelada 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Coquinha gelada 2</h2>
+                        <p class="description">Lata 500ml</p>
+                        <div class="price">R$ 10,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/coquinha_gelada 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Coquinha gelada 3</h2>
+                        <p class="description">Lata 750ml</p>
+                        <div class="price">R$ 12,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="orders">
+                <h2>Por fim, sua sobremesa</h2>
+                <div class="container">
+                    <div class="order">
+                        <img src="assets/pudim 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Pudim</h2>
+                        <p class="description">Apenas pudim</p>
+                        <div class="price">R$ 8,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/pudim 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Pudim 2</h2>
+                        <p class="description">Apenas pudim</p>
+                        <div class="price">R$ 10,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                    <div class="order">
+                        <img src="assets/pudim 1.png" class="img" alt="Foto da comida">
+                        <h2 class="title">Pudim 3</h2>
+                        <p class="description">Apenas pudim</p>
+                        <div class="price">R$ 12,90</div>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
+                </div>
+            </div> 
+                       
+        </div>
+
+        <div class="confirmation">
+            <button disabled="disabled">Selecione os 3 itens<br>para fechar o pedido</button>
+        </div>
+
+        <div class="modal">
+            <div class="bg"></div>
+            <div class="container">
+                <h2>Confirme seu pedido</h2>
+                <div class="orders">
+                    <div class="order">
+                        <span>Frango Yin Yang</span>
+                        <span>14,90</span>
+                    </div>
+                    <div class="order">
+                        <span>Frango Yin Yang</span>
+                        <span>14,90</span>
+                    </div>
+                    <div class="order">
+                        <span>Frango Yin Yang</span>
+                        <span>14,90</span>
+                    </div>
+                    <div class="total">
+                        <span>TOTAL</span>
+                        <span>14,90</span>
+                    </div>
+                </div>
+                <button class="ok">Tudo certo, pode pedir!</button>
+                <button class="abort">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+
+
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
