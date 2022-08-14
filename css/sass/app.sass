@@ -6,14 +6,16 @@
 .app 
     width: 100vw
     height: 100vh
-    display: grid
-    grid-template-rows: auto 1fr auto
     font-family: 'Roboto', sans-serif
-    overflow: hidden
     background: #EEEEEE
+    overflow-x: hidden
+    padding: 0 0 0 20px
 
 .main-header
-    grid-row: 1/2
+    top: 0
+    left: 0
+    position: fixed
+    width: 100vw
     height: 94px
     background: red
     color: #fff
@@ -22,6 +24,7 @@
     gap: 2px
     padding: 0 0 0 20px
     justify-content: center
+    z-index: 2
 
     h1 
         font-family: 'Righteous', cursive
@@ -34,20 +37,20 @@
 
 .container-orders 
     width: 100vw
-    margin: 0 auto
+    margin: 104px auto
     display: flex
     flex-direction: column
     gap: 25px
     grid-row: 2/3
-    padding: 30px 0 0 20px
     overflow: hidden
     overflow-y: auto
-
+    
 
     .orders 
+
         display: flex
         flex-direction: column
-     
+        padding: 20px 20px 0 0
 
         > h2
             font-family: 'Righteous'
@@ -116,13 +119,16 @@
 
 .confirmation
     width: 100vw
-    grid-row: 3/4
+    position: fixed
+    bottom: 0
+    left: 0
     height: 94px
     background: #fff
     display: flex
     align-items: center
     justify-content: center
     padding: 20px
+    z-index: 2
 
     button
         background: #32B72F
@@ -147,7 +153,9 @@
     position: fixed
     width: 100%
     height: 100%
-
+    top: 0
+    left: 0
+    z-index: 3
     &.open
         display: flex
 
@@ -155,14 +163,13 @@
     justify-content: center
     padding: 20px
     cursor: pointer
-    z-index: 1
 
     .bg 
         position: absolute
         width: 100%
         height: 100%
         background: rgba(255, 255, 255, 0.9)
-        z-index: 2
+        z-index: 4
 
     .container
         width: 100%
@@ -173,7 +180,7 @@
         gap: 25px
         background: #50D074
         border-radius: 5px
-        z-index: 3
+        z-index: 5
 
         h2 
             font-weight: 700
