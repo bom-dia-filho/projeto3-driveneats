@@ -17,7 +17,7 @@ var minimumOrder = _toConsumableArray(orders).map(function () {
 
 var enableButton = function enableButton(minimumOrder, button) {
   !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true;
-  if (button.disabled) button.innerHTML = "Selecione os 3 itens<br>para fechar o pedido";else button.innerHTML = " Fechar o pedido";
+  button.innerHTML = button.disabled ? "Selecione os 3 itens<br>para fechar o pedido" : "Fechar o pedido";
 };
 
 var removeCSSClassFromAll = function removeCSSClassFromAll(elements, CSSclass) {
@@ -60,7 +60,7 @@ var sendMsgToWhatsapp = function sendMsgToWhatsapp(minimumOrder) {
   var name = prompt("Diga seu nome:");
   var address = prompt("Diga seu endereco:");
   var msg = "Ol\xE1, gostaria de fazer o pedido:\n- Prato: ".concat(minimumOrder[0].title, "\n- Bebida: ").concat(minimumOrder[1].title, "\n- Sobremesa: ").concat(minimumOrder[2].title, "\nTotal: R$ ").concat(totalPrice(minimumOrder), "\nNome: ").concat(name, "\nEndere\xE7o: ").concat(address);
-  if (!window.open("https://wa.me/5521974553791?text=".concat(encodeURI(msg)))) alert('Coe, teu navegador bloqueou o redirect.\nNa barra de endereço deve ter um icone com um x lá no final clica nele e permite.\nCaso não funcione no inicio da barra tem um icone tenta por lá.\nDe qualquer forma vou mandar a mensagem por aqui tb.\n' + msg);
+  if (!window.open("https://wa.me/5521974553791?text=".concat(encodeURI(msg)))) alert('Coe, teu navegador bloqueou o redirect.\nNa barra de endereço deve ter um icone com um x lá no final clica nele e permite.\nCaso não funcione no inicio da barra tem um icone tenta por lá.');
 };
 
 var modal = document.querySelector('.modal');

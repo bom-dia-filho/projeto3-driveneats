@@ -5,11 +5,8 @@ const minimumOrder = [...orders].map(() => null)
 
 const enableButton = (minimumOrder, button) => {
     !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true
-    if(button.disabled)
-        button.innerHTML = "Selecione os 3 itens<br>para fechar o pedido"
-    else
-        button.innerHTML  = " Fechar o pedido"
     
+    button.innerHTML = button.disabled ? "Selecione os 3 itens<br>para fechar o pedido" : "Fechar o pedido"  
 }
 
 const removeCSSClassFromAll = (elements, CSSclass) => elements.forEach(element => element.classList.remove(CSSclass))
@@ -48,9 +45,8 @@ const sendMsgToWhatsapp = minimumOrder => {
     
     const msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${minimumOrder[0].title}\n- Bebida: ${minimumOrder[1].title}\n- Sobremesa: ${minimumOrder[2].title}\nTotal: R$ ${totalPrice(minimumOrder)}\nNome: ${name}\nEndereço: ${address}`
 
-
     if(!window.open(`https://wa.me/5521974553791?text=${encodeURI(msg)}`))
-        alert('Coe, teu navegador bloqueou o redirect.\nNa barra de endereço deve ter um icone com um x lá no final clica nele e permite.\nCaso não funcione no inicio da barra tem um icone tenta por lá.\nDe qualquer forma vou mandar a mensagem por aqui tb.\n' + msg)
+        alert('Coe, teu navegador bloqueou o redirect.\nNa barra de endereço deve ter um icone com um x lá no final clica nele e permite.\nCaso não funcione no inicio da barra tem um icone tenta por lá.')
     
 }
 
