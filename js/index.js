@@ -3,7 +3,14 @@ const openModalBtn = document.querySelector('.confirmation > button')
 
 const minimumOrder = [...orders].map(() => null)
 
-const enableButton = (minimumOrder, button) => !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true;
+const enableButton = (minimumOrder, button) => {
+    !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true
+    if(button.disabled)
+        button.innerHTML = "Selecione os 3 itens<br>para fechar o pedido"
+    else
+        button.innerHTML  = " Fechar o pedido"
+    
+}
 
 const removeCSSClassFromAll = (elements, CSSclass) => elements.forEach(element => element.classList.remove(CSSclass))
 

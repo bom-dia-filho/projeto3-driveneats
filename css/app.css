@@ -4,12 +4,12 @@
 }
 
 .app {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   background: #EEEEEE;
-  overflow-x: hidden;
   padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-header {
@@ -33,25 +33,42 @@
   letter-spacing: -0.012em;
   padding: 0;
 }
+@media screen and (min-width: 614px) {
+  .main-header h1 {
+    text-align: center;
+  }
+}
 .main-header span {
   font-size: 18px;
   font-weight: 500;
 }
+@media screen and (min-width: 614px) {
+  .main-header span {
+    text-align: center;
+  }
+}
 
 .container-orders {
-  width: 100vw;
-  margin: 104px auto;
+  width: 100%;
+  margin: 124px auto;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  grid-row: 2/3;
-  overflow: hidden;
-  overflow-y: auto;
+}
+@media screen and (min-width: 614px) {
+  .container-orders {
+    margin-bottom: 10px;
+    max-width: 550px;
+  }
 }
 .container-orders .orders {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0 0;
+}
+@media screen and (min-width: 614px) {
+  .container-orders .orders {
+    padding: 0;
+  }
 }
 .container-orders .orders > h2 {
   font-family: "Righteous";
@@ -60,6 +77,11 @@
   font-size: 26px;
   letter-spacing: 0.018em;
   color: #333333;
+}
+@media screen and (min-width: 614px) {
+  .container-orders .orders > h2 {
+    text-align: center;
+  }
 }
 .container-orders .orders .container {
   padding: 20px 20px 20px 0;
@@ -120,7 +142,7 @@
 }
 
 .confirmation {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -131,6 +153,12 @@
   justify-content: center;
   padding: 20px;
   z-index: 2;
+}
+@media screen and (min-width: 614px) {
+  .confirmation {
+    position: relative;
+    background: transparent;
+  }
 }
 .confirmation button {
   background: #32B72F;
@@ -228,8 +256,9 @@
 }
 .modal .container .abort {
   border: none;
-  width: 100%;
-  padding: 5px 0;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
   color: #50D074;
   font-weight: 700;
   font-size: 18px;

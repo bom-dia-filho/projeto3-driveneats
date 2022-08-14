@@ -16,7 +16,8 @@ var minimumOrder = _toConsumableArray(orders).map(function () {
 });
 
 var enableButton = function enableButton(minimumOrder, button) {
-  return !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true;
+  !minimumOrder.includes(null) ? button.disabled = false : button.disabled = true;
+  if (button.disabled) button.innerHTML = "Selecione os 3 itens<br>para fechar o pedido";else button.innerHTML = " Fechar o pedido";
 };
 
 var removeCSSClassFromAll = function removeCSSClassFromAll(elements, CSSclass) {
